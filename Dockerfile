@@ -1,7 +1,8 @@
 FROM phusion/baseimage:latest
 
 RUN \
-  apt-get install zip unzip wget && \
+  apt-get update && \
+  apt-get install -y zip unzip wget && \
   wget --quiet -O /opt/xonotic.zip http://dl.xonotic.org/xonotic-0.8.0.zip && \
   unzip /opt/xonotic.zip -d /opt && \
   rm /opt/xonotic.zip && \
